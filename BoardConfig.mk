@@ -35,8 +35,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-#TARGET_KERNEL_CONFIG := 2014011_debug_defconfig
-#TARGET_KERNEL_SOURCE := Micromax/A311\
 TARGET_PREBUILT_KERNEL := device/Micromax/A311/kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/Micromax/A311/bootimg.mk
 BOARD_CUSTOM_BOOTIMG := true
@@ -51,6 +49,12 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
+
+# Display
+TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
+
+# Blobs to preload
+TARGET_LDPRELOAD := libxlog.so:libmtk_symbols.so
 
 # EGL
 BOARD_EGL_CFG := device/Micromax/A311/configs/egl.cfg
@@ -126,9 +130,6 @@ USE_MINIKIN := true
 
 # Hack for build
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
-
-# Remove Stock FMRadio by Default.
-$(shell rm -rf $(LOCAL_PATH)/packages/apps/FMRadio)
 
 # Use old sepolicy version
 POLICYVERS := 26
