@@ -20,10 +20,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
     libxlog
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.mt6592
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -31,9 +27,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler \
     tinymix
-
-PRODUCT_PACKAGES += \
-    audio.primary.mt6592
 
 PRODUCT_PACKAGES += \
     audio_policy.default
@@ -64,13 +57,6 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor
-
-# GSM
-#PRODUCT_PACKAGES += \
-#    gsm0710muxd \
-#    gsm0710muxdmd2
-
-PRODUCT_PACKAGES += libmt6592
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MediaTekRIL
@@ -140,17 +126,11 @@ PRODUCT_PACKAGES += \
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio \
-    libfmjni \
-    libfmcust \
-    libmtkplayer
+    libfmjni
 
 # Gello
 PRODUCT_PACKAGES += \
     Gello
-
-# YGPS
-PRODUCT_PACKAGES+=\
-    YGPS
 
 # Camera
 PRODUCT_PACKAGES += \
