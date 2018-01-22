@@ -30,8 +30,9 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_PACKAGES += \
-    audio_policy.default
-    
+    audio_policy.default\
+    audio.primary.mt6592
+
 PRODUCT_PACKAGES += \
     lib_driver_cmd_mt66xx
     
