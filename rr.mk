@@ -14,7 +14,7 @@ PRODUCT_LOCALES := en_US ru_RU en_AU en_IN fr_FR it_IT es_ES et_EE de_DE nl_NL c
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A311
-PRODUCT_NAME := lineage_A311
+PRODUCT_NAME := rr_A311
 PRODUCT_BRAND := Micromax
 PRODUCT_MODEL := A311
 PRODUCT_MANUFACTURER := Micromax
